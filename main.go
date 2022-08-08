@@ -9,7 +9,7 @@ import (
 
 func main() {
 	fmt.Println("\nHello! I can solve your math problem ;)\n")
-	fmt.Println("Please note that I can do only one operation with two numbers in one time\n")
+	fmt.Println("Please note that I can do only one operation ( + - * / ) with two numbers in one time\n")
 	fmt.Print("Please input your math problem and press \"Enter\": ")
 	reader := bufio.NewReader(os.Stdin)
 	// ReadString will block until the delimiter is entered
@@ -38,7 +38,7 @@ func main() {
 	}
 
 	fmt.Println()
-	fmt.Printf("pfff... that's easy ;) \n\nThe answer is:  %v\n", res)
+	fmt.Printf("pfff... that's easy :) \n\nThe answer is:  %v\n", res)
 	fmt.Println()
 
 }

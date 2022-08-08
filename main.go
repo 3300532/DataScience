@@ -48,13 +48,13 @@ func Scanner1(s string) (float64, string, float64) {
 	oper := ""
 	err3 := true
 	for _, el := range s {
-		if (el >= '0' && el <= '9') && !operFlag {
+		if (el >= '0' && el <= '9' || el == '.') && !operFlag {
 			arg1Str += string(el)
 		} else if MathOper(el) {
 			oper += string(el)
 			err3 = false
 			operFlag = true
-		} else if (el >= '0' && el <= '9') && operFlag {
+		} else if (el >= '0' && el <= '9' || el == '.') && operFlag {
 			arg2Str += string(el)
 		}
 	}

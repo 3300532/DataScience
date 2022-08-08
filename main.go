@@ -9,7 +9,7 @@ import (
 
 func main() {
 	fmt.Println("\nHello! I can solve your math problem ;)\n")
-	fmt.Println("Please note that I can do only one operation ( + - * / ) with two numbers in one time\n")
+	fmt.Println("Please note that I can do only one operation ( + - * / ) with two numbers at a time\n")
 	fmt.Print("Please input your math problem and press \"Enter\": ")
 	reader := bufio.NewReader(os.Stdin)
 	// ReadString will block until the delimiter is entered
@@ -43,8 +43,10 @@ func main() {
 
 }
 
-//The Scanner funcion reads an argument from the command line
-//as a strinfg and splits it into two arguments and an operator
+/*
+The Scanner1 funcion converts input(string) from the command line
+and splits it into two arguments and an operator
+*/
 func Scanner1(s string) (float64, string, float64) {
 
 	operFlag := false

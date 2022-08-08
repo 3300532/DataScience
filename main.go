@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello! I can solve your math problem ;)")
+	fmt.Println("\nHello! I can solve your math problem ;)\n")
 	fmt.Print("Please input your math problem and press Enter: ")
 	reader := bufio.NewReader(os.Stdin)
 	// ReadString will block until the delimiter is entered

@@ -10,7 +10,7 @@ import (
 func main() {
 	fmt.Println("\nHello! I can solve your math problem ;)\n")
 	fmt.Println("Please note that I can do only one operation ( + - * / ) with two numbers at a time\n")
-	fmt.Print("Please input your math problem and press \"Enter\": ")
+	fmt.Print("Input your math problem and press \"Enter\": ")
 	reader := bufio.NewReader(os.Stdin)
 	// ReadString will block until the delimiter is entered
 	input, err := reader.ReadString('\n')
@@ -39,8 +39,8 @@ func main() {
 
 	fmt.Println()
 	fmt.Printf("pfff... that's easy :) \n\nThe answer is:  %v\n", res)
-	fmt.Println()
 
+	WinkPrinter()
 }
 
 /*
@@ -48,7 +48,6 @@ The Scanner1 funcion converts input(string) from the command line
 and splits it into two arguments and an operator
 */
 func Scanner1(s string) (float64, string, float64) {
-
 	operFlag := false
 	arg1Str := ""
 	arg2Str := ""
@@ -68,21 +67,25 @@ func Scanner1(s string) (float64, string, float64) {
 	}
 	if err3 {
 		fmt.Println("\nError: Please input correct math operator such as: + - * / \n")
+		fmt.Println()
+		ErrPrinter()
+		fmt.Println()
 		return 0, "Error", 0
 	}
 
 	arg1, err1 := strconv.ParseFloat(arg1Str, 64)
 	arg2, err2 := strconv.ParseFloat(arg2Str, 64)
 	if err1 != nil || err2 != nil {
-		//fmt.Println(err1)
-		fmt.Println("\nError: Please input valid number =( ")
-		fmt.Println()
+		// fmt.Println(err1)
+		fmt.Println("\nError: Please input valid number")
+		ErrPrinter()
+
 		return 0, "Error", 0
 	}
 	return float64(arg1), oper, float64(arg2)
 }
 
-//MathOper function checks if a given rune is a math operator
+// MathOper function checks if a given rune is a math operator
 func MathOper(r rune) bool {
 	operArr := "+-*/"
 	for _, el := range operArr {
@@ -91,4 +94,16 @@ func MathOper(r rune) bool {
 		}
 	}
 	return false
+}
+
+func ErrPrinter() {
+	fmt.Println()
+	fmt.Println("¯\\_(ツ)_/¯")
+	fmt.Println()
+}
+
+func WinkPrinter() {
+	fmt.Println()
+	fmt.Println("(˵ •̀ ᴗ - ˵ ) ✧")
+	fmt.Println()
 }

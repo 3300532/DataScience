@@ -8,9 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Printf("\nHello! I can solve your math problem ;)\n\n")
-	fmt.Printf("Please note that I can do only one operation ( + - * / ) with two numbers at a time\n\n")
-	fmt.Print("Input your math problem and press \"Enter\": ")
+	Greeting()
 	reader := bufio.NewReader(os.Stdin)
 	// ReadString will block until the delimiter is entered
 	input, err := reader.ReadString('\n')
@@ -94,6 +92,12 @@ func MathOper(r rune) bool {
 		}
 	}
 	return false
+}
+
+func Greeting() {
+	fmt.Printf("\nHello! I can solve your math problem ;)\n\n")
+	fmt.Printf("Please note that I can do only one operation ( + - * / ) with two numbers at a time\n\n")
+	fmt.Print("Input your math problem and press \"Enter\": ")
 }
 
 func ErrPrinter() {

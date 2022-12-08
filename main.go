@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
-	fmt.Println("\nHello! I can solve your math problem ;)\n")
-	fmt.Println("Please note that I can do only one operation ( + - * / ) with two numbers at a time\n")
+	fmt.Printf("\nHello! I can solve your math problem ;)\n\n")
+	fmt.Printf("Please note that I can do only one operation ( + - * / ) with two numbers at a time\n\n")
 	fmt.Print("Input your math problem and press \"Enter\": ")
 	reader := bufio.NewReader(os.Stdin)
 	// ReadString will block until the delimiter is entered
@@ -66,7 +66,7 @@ func Scanner1(s string) (float64, string, float64) {
 		}
 	}
 	if err3 {
-		fmt.Println("\nError: Please input correct math operator such as: + - * / \n")
+		fmt.Printf("\nerror: please input correct math operator such as: + - * /\n")
 		fmt.Println()
 		ErrPrinter()
 		fmt.Println()
@@ -77,10 +77,10 @@ func Scanner1(s string) (float64, string, float64) {
 	arg2, err2 := strconv.ParseFloat(arg2Str, 64)
 	if err1 != nil || err2 != nil {
 		// fmt.Println(err1)
-		fmt.Println("\nError: Please input valid number")
+		fmt.Println("\nerror: please input valid number")
 		ErrPrinter()
 
-		return 0, "Error", 0
+		return 0, "error", 0
 	}
 	return float64(arg1), oper, float64(arg2)
 }

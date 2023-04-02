@@ -1,12 +1,23 @@
 package stat
 
-// To be elaborated.....
+type stat struct {
+	numsInt   []int
+	sumInt    int
+	numsFloat []float64
+	sumFloat  float64
+}
+
+func NewStat() stat {
+
+	var statStruct stat
+
+	return statStruct
+}
 
 // This function returns the Average of the given slice of numbers
-func Average(data Data) float64 {
-	var sum float64
+func (s *stat) Average() float64 {
 
-	sum = data.SumFloat64()
+	// s.sumFloat =
 
 	var res float64
 

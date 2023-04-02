@@ -1,3 +1,3 @@
-module github.com/aidos-dev/DataScience/tree/main/s-calculator
+module aidos-dev/DataScience
 
 go 1.20
